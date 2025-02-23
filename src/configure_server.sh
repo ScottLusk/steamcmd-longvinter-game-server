@@ -16,6 +16,7 @@ DEFAULT_CFG_TENT_DECAY="true"
 DEFAULT_CFG_MAX_TENTS=2
 DEFAULT_CFG_GAME_PORT=7777
 DEFAULT_CFG_QUERY_PORT=27016
+DEFAULT_CFG_COOP_PLAY="false"
 
 # Check if script was ran from data directory (see DATA_DIR variable above)
 if [ $PWD != $DATA_DIR ]; then
@@ -43,6 +44,7 @@ if [ -z "$CFG_TENT_DECAY" ]; then CFG_TENT_DECAY=$DEFAULT_CFG_TENT_DECAY; fi
 if [ -z "$CFG_MAX_TENTS" ]; then CFG_MAX_TENTS=$DEFAULT_CFG_MAX_TENTS; fi
 if [ -z "$CFG_GAME_PORT" ]; then CFG_GAME_PORT=$DEFAULT_CFG_GAME_PORT; fi
 if [ -z "$CFG_QUERY_PORT" ]; then CFG_QUERY_PORT=$DEFAULT_CFG_QUERY_PORT; fi
+if [ -z "$CFG_COOP_PLAY" ]; then CFG_COOP_PLAY=$DEFAULT_CFG_COOP_PLAY; fi
 
 echo "Setting config variables..."
 # Creating the Game.ini file line for line.
@@ -58,3 +60,4 @@ echo "AdminSteamID=$CFG_ADMIN_STEAM_ID" >> $CONFIG_FILE_FULL_PATH
 echo "PVP=$CFG_ENABLE_PVP" >> $CONFIG_FILE_FULL_PATH
 echo "TentDecay=$CFG_TENT_DECAY" >> $CONFIG_FILE_FULL_PATH
 echo "MaxTents=$CFG_MAX_TENTS" >> $CONFIG_FILE_FULL_PATH
+echo "CoopPlay=$CFG_COOP_PLAY" >> $CONFIG_FILE_FULL_PATH
