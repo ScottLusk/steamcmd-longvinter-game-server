@@ -20,8 +20,7 @@ RUN apt-get update && \
 CMD ${STEAMSCRIPTDIR}/steam_update.sh && \
 	${STEAMSCRIPTDIR}/configure_server.sh && \
 	cd ${STEAMAPPDIR} && \
-	./LongvinterServer.sh
+	su steam -c ./LongvinterServer.sh
 
-ADD src ${STEAMSCRIPTDIR}
-
+ADD --chown=steam:steam --chmod=777 src ${STEAMSCRIPTDIR}
 RUN ${STEAMSCRIPTDIR}/steam_update.sh
