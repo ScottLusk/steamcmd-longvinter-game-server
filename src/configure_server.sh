@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Config vars
-DATA_DIR="$STEAMAPPDIR/data"
-SERVER_CONFIG_PATH="longvinter-linux-server/Longvinter/Saved/Config/LinuxServer/Game.ini"
+DATA_DIR="$STEAMAPPDIR"
+SERVER_CONFIG_PATH="Longvinter/Saved/Config/LinuxServer/Game.ini"
 
 # Default server settings (do not edit these, use environment variables to override)
 DEFAULT_CFG_SERVER_NAME="Unnamed Island"

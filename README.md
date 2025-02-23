@@ -10,7 +10,7 @@ https://www.longvinter.com/
   - Query port
   
 ## Volumes
-- /home/steam/longvinter-dedicated-server/data
+- /home/steam/longvinter-dedicated-server/Longvinter
   - Mount this volume to persist the server game files storage
 
 ## Updates
